@@ -11,6 +11,7 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 specific language governing permissions and limitations under the License.
 """
 
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -20,18 +21,25 @@ def home(request):
     """
     首页
     """
-    return render(request, "bk_framework_app/index_home.html")
+    return render(request, 'bk_framework_app/index_home.html')
 
 
 def dev_guide(request):
     """
     开发指引
     """
-    return render(request, "bk_framework_app/dev_guide.html")
+    return render(request, 'bk_framework_app/dev_guide.html')
 
 
 def contact(request):
     """
     联系页
     """
-    return render(request, "bk_framework_app/contact.html")
+    return render(request, 'bk_framework_app/contact.html')
+
+
+def hello(request):
+    """
+    Hello API endpoint
+    """
+    return HttpResponse('Hello, welcome to BlueKing PaaS!')
