@@ -49,7 +49,7 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': xogas001,  # noqa
+        'NAME': 'xogas001',  # noqa
         'USER': 'root',
         'PASSWORD': '123456789',
         'HOST': '127.0.0.1',
