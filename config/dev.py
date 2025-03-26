@@ -11,6 +11,8 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 specific language governing permissions and limitations under the License.
 """
 
+import os
+
 from blueapps.conf.validators import EnvValidator
 from config import RUN_VER
 from config.default import FRONTEND_BACKEND_SEPARATION
@@ -48,12 +50,10 @@ DEBUG = True
 # SQL: CREATE DATABASE `{{ app_code }}` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; # noqa: E501
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'xogas001',  # noqa
-        'USER': 'root',
-        'PASSWORD': '123456789',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'db.sqlite3'
+        ),
     },
 }
 
