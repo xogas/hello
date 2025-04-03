@@ -13,13 +13,13 @@ specific language governing permissions and limitations under the License.
 
 from config import RUN_VER
 
-if RUN_VER == "open":
+if RUN_VER == 'open':
     from blueapps.patch.settings_open_saas import *  # noqa
 else:
     from blueapps.patch.settings_paas_services import *  # noqa
 
 # 正式环境
-RUN_MODE = "PRODUCT"
+RUN_MODE = 'PRODUCT'
 
 # 只对正式环境日志级别进行配置，可以在这里修改
 # from blueapps.conf.log import set_log_level # noqa
@@ -39,3 +39,10 @@ RUN_MODE = "PRODUCT"
 #         },
 #     }
 # )
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
+        'NAME': 'db.sqlite3',
+    }
+}
