@@ -52,7 +52,7 @@ DATABASES = {
         "NAME": "xogas004",  # noqa
         "USER": "root",
         "PASSWORD": "123456789",
-        "HOST": "localhost",
+        "HOST": "127.0..0.1",
         "PORT": "3306",
     },
 }
