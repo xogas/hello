@@ -47,14 +47,10 @@ DEBUG = True
 # USE FOLLOWING SQL TO CREATE THE DATABASE NAMED APP_CODE
 # SQL: CREATE DATABASE `{{ app_code }}` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; # noqa: E501
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "xogas004",  # noqa
-        "USER": "root",
-        "PASSWORD": "123456789",
-        "HOST": "127.0..0.1",
-        "PORT": "3306",
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
+        'NAME': BASE_DIR / 'db.sqlite3',         # 数据库文件路径（默认在项目根目录）
+    }
 }
 
 # 前后端开发模式下支持跨域配置
