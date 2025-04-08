@@ -11,6 +11,11 @@ module:
               name: bk/http
             targetPort: 5000
             port: 80
+          - name: web_a
+            exposedType:
+              name: bk/http
+            targetPort: 5000
+            port: 80
     hooks:
       preRelease:
         procCommand: "python manage.py migrate --no-input"
