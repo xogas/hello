@@ -15,7 +15,7 @@ module:
         env:
           - name: FOO
             value: value_of_foo
-            description: 环境变量描述文件
+            description: env description
     hooks:
       preRelease:
         procCommand: "python manage.py migrate --no-input"
