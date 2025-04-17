@@ -1,0 +1,30 @@
+# general things to ignore
+build/
+/dist/
+*.egg-info/
+*.eggs/
+*.py[cod]
+__pycache__/
+*.so
+*~
+*.swp
+.DS_Store
+.DS_Store?
+
+# due to using tox and pytest
+.tox
+.cache
+
+# PyCharm project settings
+.idea
+.coverage
+trunk*
+.coverage
+venv
+
+# exclude static dir
+!static/*
+
+# vscode project settings
+.vscode
+.codecc
