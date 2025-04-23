@@ -28,25 +28,17 @@ RUN_MODE = 'STAGING'
 # LOGGING = set_log_level(locals())
 
 # 预发布环境数据库可以在这里配置
-# DATABASES.update(
-#     {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': '',  # 外部数据库名
-#             'USER': '',  # 外部数据库用户
-#             'PASSWORD': '',  # 外部数据库密码
-#             'HOST': '',  # 外部数据库主机
-#             'PORT': '',  # 外部数据库端口
-#         },
-#     }
-# )
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': os.environ.get('GCS_MYSQL_NAME'),
+        'USER': os.environ.get('GCS_MYSQL_USER'),
+        'PASSWORD': os.environ.get('GCS_MYSQL_PASSWORD'),
+        'HOST': os.environ.get('GCS_MYSQL_HOST'), 
+        'PORT': os.environ.get('GCS_MYSQL_PORT'),
     }
 }
+
 
 # 前后端开发模式下支持跨域配置
 if FRONTEND_BACKEND_SEPARATION:

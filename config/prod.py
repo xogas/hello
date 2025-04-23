@@ -29,7 +29,8 @@ RUN_MODE = 'PRODUCT'
 # 正式环境数据库可以在这里配置
 # DATABASES.update(
 #     {
-#         'default': {
+#         # 外部数据库授权，请联系 【蓝鲸助手】
+#         'external_db': {
 #             'ENGINE': 'django.db.backends.mysql',
 #             'NAME': '',  # 外部数据库名
 #             'USER': '',  # 外部数据库用户
@@ -40,9 +41,4 @@ RUN_MODE = 'PRODUCT'
 #     }
 # )
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
-        'NAME': 'db.sqlite3',
-    }
-}
+

@@ -13,9 +13,9 @@ module:
             port: 80
     configuration:
         env:
-          - name: FOO
-            value: value_of_foo
-            description: 配置文件
+          - name: FOO2
+            value: value_of_foo2
+            description: "env description2"
     hooks:
       preRelease:
         procCommand: "python manage.py migrate --no-input"
