@@ -13,6 +13,9 @@ module:
             port: 80
     configuration:
         env:
+          - name: FOO1
+            value: value_of_foo1
+            description: "env description1"
           - name: FOO2
             value: value_of_foo2
             description: "env description2"
