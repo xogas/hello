@@ -12,6 +12,7 @@ specific language governing permissions and limitations under the License.
 """
 
 import os
+
 import pymysql
 
 """
@@ -19,7 +20,6 @@ import pymysql
 如果你需要对settings里的内容做修改，config/default.py 文件中 添加即可
 如有任何疑问，请联系 【蓝鲸助手】
 """
-
 pymysql.install_as_MySQLdb()
 
 # V3判断环境的环境变量为BKPAAS_ENVIRONMENT
