@@ -11,6 +11,8 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 specific language governing permissions and limitations under the License.
 """
 
+import os
+
 from blueapps.conf.validators import EnvValidator
 from config import RUN_VER
 from config.default import FRONTEND_BACKEND_SEPARATION
@@ -48,8 +50,12 @@ DEBUG = True
 # SQL: CREATE DATABASE `{{ app_code }}` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; # noqa: E501
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('MYSQL_NAME'),
+        'USER': os.environ.get('MYSQL_USER'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
+        'HOST': os.environ.get('MYSQL_HOST'),
+        'PORT': os.environ.get('MYSQL_PORT'),
     }
 }
 
