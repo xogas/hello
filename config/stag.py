@@ -10,7 +10,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
 """
-import os
 
 from config import RUN_VER
 from config.default import FRONTEND_BACKEND_SEPARATION
@@ -29,18 +28,18 @@ RUN_MODE = 'STAGING'
 # LOGGING = set_log_level(locals())
 
 # 预发布环境数据库可以在这里配置
-DATABASES.update(
-    {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('MYSQL_NAME'),
-            'USER': os.environ.get('MYSQL_USER'),
-            'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-            'HOST': os.environ.get('MYSQL_HOST'),
-            'PORT': os.environ.get('MYSQL_PORT'),
-        }
-    }
-)
+# DATABASES.update(
+#     {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': '',  # 外部数据库名
+#             'USER': '',  # 外部数据库用户
+#             'PASSWORD': '',  # 外部数据库密码
+#             'HOST': '',  # 外部数据库主机
+#             'PORT': '',  # 外部数据库端口
+#         },
+#     }
+# )
 
 # 前后端开发模式下支持跨域配置
 if FRONTEND_BACKEND_SEPARATION:
