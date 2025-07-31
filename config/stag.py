@@ -29,9 +29,11 @@ RUN_MODE = 'STAGING'
 
 # 预发布环境数据库可以在这里配置
 DATABASES.update(
-     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
-        'NAME': 'db.sqlite3',
+    {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
+            'NAME': 'db.sqlite3',
+        }
     }
 )
 
