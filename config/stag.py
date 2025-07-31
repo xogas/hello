@@ -29,15 +29,9 @@ RUN_MODE = 'STAGING'
 
 # 预发布环境数据库可以在这里配置
 DATABASES.update(
-    {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('GCS_MYSQL_NAME'),
-            'USER': os.environ.get('GCS_MYSQL_USER'),
-            'PASSWORD': os.environ.get('GCS_MYSQL_PASSWORD'),
-            'HOST': os.environ.get('GCS_MYSQL_HOST'),
-            'PORT': os.environ.get('GCS_MYSQL_PORT'),
-        }
+     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # SQLite 引擎
+        'NAME': 'db.sqlite3',
     }
 )
 
