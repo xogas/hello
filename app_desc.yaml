@@ -9,7 +9,7 @@ module:
           - name: web
             exposedType:
               name: bk/http
-            targetPort: 5000
+            targetPort: 8000
             port: 80
     configuration:
       env:
