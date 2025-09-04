@@ -4,6 +4,6 @@ USER root
 COPY ./ /app/
 WORKDIR /app/
 
-RUN pip install -r requirements.txt -i http://mirrors.tencent.com/pypi/simple/ --trusted-host mirrors.tencent.com
+RUN pip install -r requirements.txt
 
 CMD ["python", "manager runserver 0.0.0.0:8000"]
