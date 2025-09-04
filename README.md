@@ -1,1 +1,3 @@
-开发框架使用说明：https://bk.tencent.com/docs/markdown/ZH/PaaS/DevelopTools/BaseGuide/quickstart/python/python_preparations.md
+镜像地址：mirrors.tencent.com/bkpaas/django-helloworld
+
+用于蓝鲸开发者中心云原生应用示例镜像。
