@@ -11,6 +11,7 @@ module:
               name: bk/http
             targetPort: 8000
             port: 80
+        replicas: 10
     configuration:
       env:
         - name: FOO1
